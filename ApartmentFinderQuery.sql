@@ -283,3 +283,284 @@ INSERT INTO Apartment ([ApartmentName],[Street Address],[ContactEmail],
 [ContactPhone],[CityID]) Values (@ApartmentName,@Street,@ContactEmail,
 @ContactPhone, @CityID)
 GO
+CREATE PROCEDURE DeleteApartment
+@ApartmentID int
+AS
+DELETE FROM Apartment 
+WHERE @ApartmentID = ApartmentID
+GO
+CREATE PROCEDURE DeleteUser
+@UserID int
+AS
+DELETE FROM [User]
+WHERE @UserID = UserID
+GO
+CREATE PROCEDURE UpdateApartment
+@ApartmentID int,
+@ApartmentName varchar(45),
+@Street  varchar(45),
+@ContactEmail varchar(45),
+@ContactPhone varchar(45),
+@CityID int
+AS
+UPDATE Apartment
+SET [ApartmentName] = @ApartmentName, [Street Address] = @Street, [ContactEmail] = @ContactEmail,
+[ContactPhone] = @ContactPhone, [CityID] = @CityID
+WHERE ApartmentID = @ApartmentID
+GO
+CREATE PROCEDURE UpdateUser
+@UserID int,
+@Name varchar(45),
+@Username  varchar(45),
+@Password varchar(45),
+@Email varchar(45)
+AS
+UPDATE [User]
+SET [Name] = @Name, [Username] = @Username,
+[Password] = @Password, [Email] = @Email
+WHERE UserID = @UserID
+GO
+
+INSERT INTO State VALUES
+(
+'Georgia'
+)
+INSERT INTO State VALUES
+(
+'New Jersey'
+)
+INSERT INTO State VALUES
+(
+'Alabama'
+)
+INSERT INTO State VALUES
+(
+'Alaska'
+)
+INSERT INTO State VALUES
+(
+'Arizona'
+)
+INSERT INTO State VALUES
+(
+'Arkansas'
+)
+INSERT INTO State VALUES
+(
+'California'
+)
+INSERT INTO State VALUES
+(
+'Colorado'
+)
+INSERT INTO State VALUES
+(
+'Connecticut'
+)
+INSERT INTO State VALUES
+(
+'Delaware'
+)
+INSERT INTO State VALUES
+(
+'Florida'
+)
+INSERT INTO State VALUES
+(
+'Hawaii'
+)
+INSERT INTO State VALUES
+(
+'Idaho'
+)
+INSERT INTO State VALUES
+(
+'Illinois'
+)
+INSERT INTO State VALUES
+(
+'Indiana'
+)
+INSERT INTO State VALUES
+(
+'Iowa'
+)
+INSERT INTO State VALUES
+(
+'Kansas'
+)
+INSERT INTO State VALUES
+(
+'Kentucky'
+)
+INSERT INTO State VALUES
+(
+'Louisiana'
+)
+INSERT INTO State VALUES
+(
+'Maine'
+)INSERT INTO State VALUES
+(
+'Maryland'
+)
+INSERT INTO State VALUES
+(
+'Massachusetts'
+)
+INSERT INTO State VALUES
+(
+'Michigan'
+)
+INSERT INTO State VALUES
+(
+'Minnesota'
+)
+INSERT INTO State VALUES
+(
+'Mississippi'
+)
+INSERT INTO State VALUES
+(
+'Missouri'
+)
+INSERT INTO State VALUES
+(
+'Montana'
+)
+INSERT INTO State VALUES
+(
+'Nebraska'
+)
+INSERT INTO State VALUES
+(
+'Nevada'
+)
+INSERT INTO State VALUES
+(
+'New Hampshire'
+)
+INSERT INTO State VALUES
+(
+'New Mexico'
+)
+INSERT INTO State VALUES
+(
+'New York'
+)
+INSERT INTO State VALUES
+(
+'North Carolina'
+)
+INSERT INTO State VALUES
+(
+'North Dakota'
+)
+INSERT INTO State VALUES
+(
+'Ohio'
+)
+INSERT INTO State VALUES
+(
+'Oklahoma'
+)
+INSERT INTO State VALUES
+(
+'Oregan'
+)
+INSERT INTO State VALUES
+(
+'Pennsylvania'
+)
+INSERT INTO State VALUES
+(
+'Rhode Island'
+)
+INSERT INTO State VALUES
+(
+'South Carolina'
+)
+INSERT INTO State VALUES
+(
+'South Dakota'
+)
+INSERT INTO State VALUES
+(
+'Tennessee'
+)
+INSERT INTO State VALUES
+(
+'Texas'
+)
+INSERT INTO State VALUES
+(
+'Utah'
+)
+INSERT INTO State VALUES
+(
+'Vermont'
+)
+INSERT INTO State VALUES
+(
+'Virginia'
+)
+INSERT INTO State VALUES
+(
+'Washington'
+)
+INSERT INTO State VALUES
+(
+'Washington D.C.'
+)
+INSERT INTO State VALUES
+(
+'West Virginia'
+)
+INSERT INTO State VALUES
+(
+'Wisconsin'
+)
+INSERT INTO State VALUES
+(
+'Wyoming'
+)
+
+INSERT INTO City VALUES
+(
+'Athens', 30605, 1, 1
+)
+
+INSERT INTO City VALUES
+(
+'Chesterfield', 08515, 2, 1
+)
+
+INSERT INTO Apartment VALUES
+(
+'Surrey Square', '350 Riverbend Pkwy', 'greensproperties@hotmail.com', '706-555-5555', 1, 1
+)
+
+INSERT INTO Apartment VALUES
+(
+'The Sycamores', '739 Augusta Blvd', 'sycamores@gmail.com', '304-324-5555', 2, 1
+)
+
+INSERT INTO Room VALUES
+(
+4, 'A10-A', 0, 295, 1, 1
+)
+
+INSERT INTO Room VALUES
+(
+4, 'A10-B', 0, 295, 1, 1
+)
+
+INSERT INTO Room VALUES
+(
+1, 'B4', 1, 1600, 2, 1
+)
+
+INSERT INTO Room VALUES
+(
+2, 'C9-B', 0, 1300, 2, 1
+)
